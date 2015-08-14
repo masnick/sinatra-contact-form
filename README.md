@@ -1,6 +1,19 @@
 # Sinatra Contact Form
 
-A quick Sinatra app that can accept a contact form's POST, verify non-robotness with Google's recaptcha, and send an email with SMTP.
+A quick Sinatra app that can accept a contact form's POST, verify non-robotness with Google's reCAPTCHA, and send an email with SMTP.
+
+## How it works
+
+This app expects a web form to `POST` the following:
+
+- `name`
+- `email`
+- `message`
+- `g-recaptcha-response`, which is from a [Google reCAPTCHA](http://www.google.com/recaptcha/intro/index.html)
+
+The app will then use the SMTP settings defined in `ENV` variables (see `.env-example`) to send you the form contents in an email.
+
+On success (or captcha fail), users will be redirected to the URLs of your choice (also defined in `ENV` variables).
 
 ## Running in development
 
