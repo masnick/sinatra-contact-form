@@ -6,6 +6,7 @@ Dotenv.load unless ENV['RACK_ENV'] == "production"
 
 set :force_ssl, (ENV['RACK_ENV'] == 'production')
 before do
+  # http://bytesofpi.com/post/28952453059/forcing-ssl-in-a-sinatra-app
   ssl_whitelist = []
   if settings.force_ssl && !request.secure? && !ssl_whitelist.include?(request.path_info)
     halt 400, {'Content-Type' => 'text/plain'}, "Please use SSL."
