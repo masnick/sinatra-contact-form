@@ -16,6 +16,10 @@ I recommend Heroku. If you use them, you'll need to set some environment variabl
 
 You then type `heroku config:set ` and paste your clipboard, which will have all the environment variables in the right format for the `heroku` command. (I tried to do this all in one command but it didn't work.)
 
+## Sending email
+
+I recommend [Mandrill](http://mandrill.com) for sending email. Their free account can send 2,000 emails per month. But any transactional email delivery service that supports SMTP should work.
+
 ## License (MIT)
 
 Copyright (c) 2015 Max Masnick
