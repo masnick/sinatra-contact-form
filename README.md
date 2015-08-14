@@ -10,7 +10,11 @@ You will need to save `.env-example` as `.env`, and replace the contents accordi
 
 ## Deploying to production
 
-I recommend Heroku.
+I recommend Heroku. If you use them, you'll need to set some environment variables. You can do this from your `.env` file by running this command (Mac only):
+
+    cat .env | sed "s/#.*//" | tr "\n" " " | pbcopy
+
+You then type `heroku config:set ` and paste your clipboard, which will have all the environment variables in the right format for the `heroku` command. (I tried to do this all in one command but it didn't work.)
 
 ## License (MIT)
 
