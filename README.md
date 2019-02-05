@@ -31,7 +31,7 @@ You then type `heroku config:set ` and paste your clipboard, which will have all
 
 ## Sending email
 
-I recommend [Mandrill](http://mandrill.com) for sending email. Their free account can send 2,000 emails per month. But any transactional email delivery service that supports SMTP should work.
+Try [Postmark](https://postmarkapp.com) or one of the similar alternatives for sending email.
 
 ## License (MIT)
 
