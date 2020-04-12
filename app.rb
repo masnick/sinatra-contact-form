@@ -14,10 +14,10 @@ before do
 end
 
 post "/#{ENV['SECRET_PATH']}" do
-  hcaptcha_response = Unirest.post(
+  hcaptcha_response = RestClient.post(
     "https://hcaptcha.com/siteverify",
     # headers:{ "Accept" => "application/json" },
-    parameters: { :secret => ENV["HCAPTCHA_SECRET"], :response => params['h-captcha-response'] }
+    params: { :secret => ENV["HCAPTCHA_SECRET"], :response => params['h-captcha-response'] }
   )
   if hcaptcha_response.body['success']
     Pony.mail({
