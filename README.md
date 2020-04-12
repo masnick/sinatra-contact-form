@@ -9,7 +9,7 @@ This app expects a web form to `POST` the following:
 - `name`
 - `email`
 - `message`
-- `g-recaptcha-response`, which is from a [Google reCAPTCHA](http://www.google.com/recaptcha/intro/index.html)
+- `h-recaptcha-response`, which is from a [hCaptcha](https://www.hcaptcha.com/)
 
 The app will then use the SMTP settings defined in `ENV` variables (see `.env-example`) to send you the form contents in an email.
 
@@ -35,7 +35,7 @@ Try [Postmark](https://postmarkapp.com) or one of the similar alternatives for s
 
 ## License (MIT)
 
-Copyright (c) 2015 Max Masnick
+Copyright (c) 2020 Max Masnick
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
